@@ -61,3 +61,143 @@ const myarray2 = ["Jan ", "Feb ", "March"];
 //3)Regex :- Its respresent regular Expression like . regex is used for validate the string
 
 // WE Will Discuss this in later cource
+
+//
+/*
+5)JavaSCript Operator 
+
+Javascript operator is nothing but symbols which perform some operation with the help of operands
+
+1) Arithmetic Operator
+
+includes +, -, * , / ,% , ++,--
+
+Arithmetic Operator is just do the arithmetic operation such like addition , substraction 
+
+*/
+
+const addition = 2 + 2 + 5;
+const subtraction = 10 - 5;
+const multipication = 7 * 4;
+let divide = 10 / 5;
+
+console.log(divide);
+
+console.log(addition);
+
+// javascript comparision operator
+
+// includes ==,===,!==,>,<,>=,<=
+
+//comparision perator compare two operands and return true or false value
+
+const compare = typeof 10 == typeof 20;
+const compare1 = "2" == 2;
+const compare2 = 10 > 20;
+const compare3 = 10 <= 40;
+const compare4 = 10 != 20;
+console.log(compare4);
+console.log(compare3);
+// we will discuss later about type coersion and type conversion
+console.log(compare1);
+console.log(compare);
+
+// bitwise operator
+
+// bitwise operator performe bitwise operation
+
+const bit = (10 === 10) | (20 === 30);
+
+const bit2 = ~1;
+console.log(bit2);
+
+// logical operator
+// logical operator
+// includes &&, ||, !
+
+const logicalAnd = true && false; // false
+const logicalOr = true || false; // true
+const logicalNot = !true; // false
+
+console.log(logicalAnd);
+console.log(logicalOr);
+console.log(logicalNot);
+
+//assignment operator
+//Assignment operator allow us to assign value in variable
+
+let add = 2 + 2;
+let sub = 20 - 10;
+let multi = 10 * 2;
+multi *= 3;
+add += 10;
+add += 20;
+sub -= add;
+console.log(sub);
+console.log(multi);
+console.log(add);
+
+// Javascript Speacial operator add more feature in javascript
+
+//conditional operator
+
+const age = 20;
+const result = age < 15 ? "You Are Child" : "Your Are Adult";
+console.log(result);
+
+//delete operator
+const myInfor = {
+  name: "Amit",
+  age: 24,
+};
+
+delete myInfor.name;
+console.log(myInfor);
+const newInstance = new Object();
+const array = new Array();
+console.log(array);
+console.log(newInstance);
+const myfun = () => {
+  void 0;
+};
+console.log(myfun());
+
+//conditional statement
+// we use if else and if else if else for check the condition if condition is true then do some
+//operation niether do another operation
+
+if (myInfor.name === undefined) {
+  console.log("Yess its true");
+} else {
+  console.log("Noo");
+}
+// if conditional statement is more than 2 then we use if else if statement
+
+if (myInfor.name === "Amit") {
+  console.log("My name is Amit");
+} else if (myInfor.name === undefined) {
+  console.log("My name is undefined");
+} else {
+  console.log("My name is nothing");
+}
+
+//if conditional statements is more so we use switch statement
+
+const month = "Jan";
+
+switch (month) {
+  case "Jan":
+    console.log("January");
+    break;
+  case "Feb":
+    console.log("Feb");
+    break;
+  case "March":
+    console.log("March");
+    break;
+  case "April":
+    console.log("April");
+    break;
+  default:
+    break;
+}

@@ -201,3 +201,31 @@ switch (month) {
   default:
     break;
 }
+
+//loops
+
+// we use loop opoeration to interate every element for fix number of time
+
+// for loop
+const array1 = ["amit", "sumit"];
+let element = "";
+for (let index = 0; index < array1.length; index++) {
+  element += array1[index] + "1";
+}
+console.log(element);
+
+// while
+let mynum = 2;
+while (mynum < 10) {
+  console.log(mynum);
+  mynum++;
+}
+console.log(mynum);
+
+// do while
+
+// do while run the code at once if its is condition is false
+const val = false;
+do {
+  console.log("hello My name is Amit");
+} while (val === true);

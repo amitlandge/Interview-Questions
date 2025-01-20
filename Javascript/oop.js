@@ -52,4 +52,22 @@ Person.prototype._showInfo = function () {
 };
 
 person1._showInfo();
-console.log(person1.__proto__, Person.prototype);
+console.log(person1.__proto__, Person.prototype.constructor);
+
+const Car = function (make, speed) {
+  this.make = make;
+  this.speed = speed;
+};
+
+Car.prototype.accelerate = function () {
+  this.speed = +10;
+};
+const car1 = new Car("Suzuki", 10);
+car1.accelerate();
+console.log(car1);
+
+Car.prototype.slowSpeed = function () {
+  this.speed -= 5;
+};
+car1.slowSpeed();
+console.log(car1);

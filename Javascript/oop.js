@@ -71,3 +71,124 @@ Car.prototype.slowSpeed = function () {
 };
 car1.slowSpeed();
 console.log(car1);
+
+// classes in oop
+
+// classes is just synthetic sugar of object . blueprint of an object
+
+class Emp {
+  constructor(name, birthyear) {
+    (this.name = name), (this.birthyear = birthyear);
+    this.year = new Date().getFullYear();
+  }
+  calAge() {
+    console.log(
+      `Hii ${this.name} . You are ${this.year - this.birthyear} years old`
+    );
+  }
+}
+const emp1 = new Emp("Amit", 2000);
+emp1.calAge();
+
+// Adding getter and setter methods
+
+// Getter and Setter methods in JavaScript classes
+
+// Getters and setters are used to protect your data, particularly when creating classes.
+// For example, suppose you want to create a class for a person.
+// The class has two properties: name and age.
+// You want to make sure that the age property is always a positive number.
+
+class Person2 {
+  constructor(name, age) {
+    this._name = name;
+    this._age = age;
+  }
+
+  // Getter for name
+  get name() {
+    return this._name;
+  }
+
+  // Setter for name
+  set name(newName) {
+    if (newName.length > 0) {
+      this._name = newName;
+    } else {
+      console.log("Name cannot be empty");
+    }
+  }
+
+  // Getter for age
+  get age() {
+    return this._age;
+  }
+
+  // Setter for age
+  set age(newAge) {
+    if (newAge > 0) {
+      this._age = newAge;
+    } else {
+      console.log("Age must be a positive number");
+    }
+  }
+}
+
+const person = new Person2("John", 30);
+console.log(person.name); // John
+person.name = "Doe";
+console.log(person.name); // Doe
+person.age = 25;
+console.log(person.age); // 25
+person.age = -5; // Age must be a positive number
+
+class Employee {
+  constructor(name, position) {
+    this._name = name;
+    this._position = position;
+  }
+
+  // Getter for name
+  get name() {
+    return this._name;
+  }
+
+  // Setter for name
+  set name(newName) {
+    if (newName.length > 0) {
+      this._name = newName;
+    } else {
+      console.log("Name cannot be empty");
+    }
+  }
+
+  // Getter for position
+  get position() {
+    return this._position;
+  }
+
+  // Setter for position
+  set position(newPosition) {
+    if (newPosition.length > 0) {
+      this._position = newPosition;
+    } else {
+      console.log("Position cannot be empty");
+    }
+  }
+  get info() {
+    return this._info;
+  }
+  set info(info) {
+    if (info) {
+      this._info = info;
+    }
+  }
+}
+
+const emp2 = new Employee("Amit", "Manager");
+console.log(emp2.name); // John
+emp2.name = "Sumit";
+console.log(emp2.name); // Doe
+emp2.position = "Senior Manager";
+emp2.info = "Developer";
+console.log(emp2._info); // Senior Manager

@@ -192,3 +192,37 @@ console.log(emp2.name); // Doe
 emp2.position = "Senior Manager";
 emp2.info = "Developer";
 console.log(emp2._info); // Senior Manager
+
+// Object create
+
+// let obj1 = {
+//   name: "Amit",
+//   age: "24",
+// };
+// let obj2 = {
+//   info() {
+//     console.log(this.name);
+//   },
+// };
+
+// inheritance using constoctor function
+
+const PerCl = function (firstName, lastName) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+};
+PerCl.prototype.info = function () {
+  console.log(`My name is ${this.firstName}`);
+};
+const person4 = new PerCl("Amit", "Landge");
+
+person4.info();
+
+const Stud3 = function (firstName, lastName, age) {
+  PerCl.call(this, firstName, lastName);
+  this.age = age;
+};
+Stud3.prototype = Object.create(PerCl.prototype);
+const student4 = new Stud3("Sumit", "landge", 29);
+console.log(student4);
+student4.info();

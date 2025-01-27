@@ -226,3 +226,27 @@ Stud3.prototype = Object.create(PerCl.prototype);
 const student4 = new Stud3("Sumit", "landge", 29);
 console.log(student4);
 student4.info();
+
+// inheritance using classes
+
+class MyClass1 {
+  constructor(name, email, password) {
+    this.name = name;
+    this.email = email;
+    this.password = password;
+  }
+  details() {
+    console.log(`My name is ${this.name} and email is ${this.email}`);
+  }
+}
+const myclass1 = new MyClass1("Amit", "amit123@gmail.com", "12345");
+console.log(myclass1);
+
+class MyClass2 extends MyClass1 {
+  constructor(name, email, password) {
+    super(name, email, password);
+  }
+}
+const myclass2 = new MyClass2("Sumit", "sumit123@gmail.com", "23456");
+console.log(myclass2);
+myclass2.details();

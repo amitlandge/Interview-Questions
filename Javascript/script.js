@@ -208,7 +208,7 @@ switch (month) {
 
 // for loop
 const array1 = ["amit", "sumit"];
-let element = "";
+let element = [];
 for (let index = 0; index < array1.length; index++) {
   element += array1[index] + "1";
 }
@@ -229,3 +229,39 @@ const val = false;
 do {
   console.log("hello My name is Amit");
 } while (val === true);
+
+const myArr = ["Jan", "Feb", "March", "April"];
+
+// console.log(myArr);
+
+// for (let i = 0; i < myArr.length; i++) {
+//   console.log(myArr[i]);
+// }
+
+// for (let key of myArr) {
+//   console.log(key);
+// }
+
+// what does loop ?
+// its make interation of every element of array and object
+
+//
+
+// for (i = 0; i < 4; i++) {
+//   console.log(i);
+//   for (j = 4; j < 6; j++) {
+//     console.log(j);
+//     for (k = 6; k < 9; k++) {
+//       console.log(k);
+//     }
+//   }
+// }
+
+// const obj10 = {
+//   name: "Amit",
+//   age: 24,
+//   hobbies: ["Playing Cricket ", "Singing"],
+// };
+// for (let key in obj10) {
+//   console.log(obj10[key]);
+// }
